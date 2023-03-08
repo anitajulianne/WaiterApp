@@ -8,7 +8,7 @@ const NavBar = () => {
         <Navbar bg="primary" variant="dark" className="rounded">
             <Container>
                 <Navbar.Brand href="/">Waiter.app</Navbar.Brand>
-                <Nav className="me-auto" className="d-flex">
+                <Nav className="d-flex">
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                 </Nav>
             </Container>

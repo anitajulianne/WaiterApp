@@ -1,7 +1,9 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import Stack from 'react-bootstrap/Stack';
 import { useSelector } from 'react-redux';
-import { getAllTables } from '../../redux/tablesRedux'
+import { getAllTables } from '../../redux/tablesRedux';
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 
 const Home = () => {
@@ -17,7 +19,9 @@ const Home = () => {
                         <Stack direction="horizontal" gap={3}>
                             <h3>Table {table.id}</h3>
                             <p className="my-1"><strong>Status:</strong> {table.status}</p>
-                            <a class="btn btn-primary ms-auto" href={`/table/${table.id}`} role="button">Show more</a>
+                            <Link className="ms-auto" to={`/table/${table.id}`}>
+                                <Button variant="primary">Show more</Button>
+                            </Link>
                         </Stack>
                     </ListGroup.Item>))}
             </ListGroup>
